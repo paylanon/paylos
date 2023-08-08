@@ -10,6 +10,15 @@ Waybar: [@1amSimp1e's gorgeous Late Night dotfiles](https://github.com/1amSimp1e
 
 Art: Simon Stålenhag
 
-# Installation
-## NixOS
-## Dotfiles Only
+## Usage
+
+**❅ Cherry-pick anything that takes your fancy from the dotfiles directory!**
+
+Generally, these files goes to your ***/home/username/.config*** directory, in folders of the same name.
+
+**❅ Alternatively, if you're running NixOS, you may choose to be adventerous and adopt paylos as your desktop config.**
+
+This is recommended, especially for a fresh installation of NixOS. Paylos makes for a great boilerplate: it comes with all the essentials of a good Linux desktop, with the option to activate a slew of features and quirks catered to powerusers. See below for a guide to installation.
+
+## NixOS Installation
+...
