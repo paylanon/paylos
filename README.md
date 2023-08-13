@@ -49,6 +49,6 @@ Otherwise, it would be wherever you have your *configuration.nix*, which the *co
 [user@nixos:~/paylhorse]$ sudo cp . /etc/nixos/
 [user@nixos:~/paylhorse]$ sudo nixos-rebuild switch
 ```
-**All done!** Look upon your slick new desktop and despair.
+**All done!** Welcome to your slick new desktop.
 
 Paylos is an ongoing project - expect major updates in the near future offering more features and additional built-in themes.
