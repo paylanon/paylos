@@ -26,7 +26,7 @@ This is recommended, especially for a fresh installation of NixOS. Paylos makes 
 
 For those unaware, NixOS is a Linux distribution in which the system in it's entirety is **declared** in what's essentially a comprehensive dotfile.
 
-Paylos is thus not just a Hyprland theme, but **a complete desktop experience**, intended, in fact, to be distributed and maintained for standard use at PAYLHORSE Games. 
+Paylos is thus not just a Hyprland theme, but **a complete desktop experience**, intended, in fact, to be distributed and maintained for standard use at PAYLHORSE Software. 
 
 ## NixOS Installation
 (1) Clone and navigate into this repository:
