@@ -46,8 +46,8 @@ Generally, this would be ***/etc/nixos***.
 
 Otherwise, it would be wherever you have your *configuration.nix*, which the *configuration.nix* of this repository would replace.
 ```console
-[user@nixos:~/paylhorse]$ sudo cp . /etc/nixos/
-[user@nixos:~/paylhorse]$ sudo nixos-rebuild switch
+[user@nixos:~/paylos]$ sudo cp . /etc/nixos/
+[user@nixos:~/paylos]$ sudo nixos-rebuild switch
 ```
 **All done!** Welcome to your slick new desktop.
 
