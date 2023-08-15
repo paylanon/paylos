@@ -6,11 +6,13 @@
 
 [![built with nix](https://builtwithnix.org/badge.svg)](https://builtwithnix.org)
 
+Includes my Neovim Configuration: [**DEVILVIM**](https://github.com/paylhorse/paylos/tree/main/dotfiles/nvim)
+
 **Credits:**
 
 Waybar: [@1amSimp1e's gorgeous Late Night dotfiles](https://github.com/1amSimp1e/dots/tree/late-night-%F0%9F%8C%83)
 
-Art: Simon Stålenhag
+Art: Simon Stålenhag, sue me
 
 ## Usage
 
