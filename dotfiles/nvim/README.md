@@ -26,6 +26,8 @@
                     ⠀⠀⠹⡄⡇⣿⠀⠀⠀⢸⣀⣼⣿⣿⣿⣄⡟⣽⣧⠀⠉⠛⠻⠿⠿⡿⢿⠸⠛⠉⠁⠸⠀⡜⠀⢀⠖⠀⠀⠙⢦⣿⠀⠀⠀⠀               
                     ⠀⠀⢀⣵⡇⡇⡇⠀⠀⢀⡋⠉⠉⣿⣷⣶⣾⢿⣿⣷⣀⠀⠀⢀⡜⠀⢸⠀⠀⠀⠀⡄⡸⠁⠀⣡⠆⠀⢀⣤⠀⠻⣧⠀⠀⠀               
 
+It's time to drop your dogshit IDE and come to the dark side.
+
 ### Usage Quick Reference:
 
 **New to Vim/Neovim?**
@@ -38,7 +40,7 @@
 
 Highly recommended to use this GUI in lieu of the terminal. The fluid animations *fucking rock*, and it remains blazingly fast.
 
-**Terminal:** `neovide`, `neovide .`, `neovide file.txt`, etc
+**Terminal:** `neovide`, `neovide .`, `neovide file.txt`, etc.
 
 [**Comment.vim**](https://github.com/numToStr/Comment.nvim)
 
