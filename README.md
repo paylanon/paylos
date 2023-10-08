@@ -6,7 +6,7 @@
 
 [![built with nix](https://builtwithnix.org/badge.svg)](https://builtwithnix.org)
 
-Includes my Neovim Configuration: [**DEVILVIM**](https://github.com/paylhorse/paylos/tree/main/dotfiles/nvim)
+Includes the Neovim Configuration: [**DEVILVIM**](https://github.com/paylhorse/paylos/tree/main/dotfiles/nvim)
 
 **Credits:**
 
@@ -53,4 +53,4 @@ Otherwise, it would be wherever you have your *configuration.nix*, which the *co
 ```
 **All done!** Welcome to your slick new desktop.
 
-Paylos is an ongoing project - expect major updates in the near future offering more features and additional built-in themes.
+Paylos is an ongoing project - expect major updates in the near future offering additional features.
