@@ -26,8 +26,6 @@
                     ⠀⠀⠹⡄⡇⣿⠀⠀⠀⢸⣀⣼⣿⣿⣿⣄⡟⣽⣧⠀⠉⠛⠻⠿⠿⡿⢿⠸⠛⠉⠁⠸⠀⡜⠀⢀⠖⠀⠀⠙⢦⣿⠀⠀⠀⠀               
                     ⠀⠀⢀⣵⡇⡇⡇⠀⠀⢀⡋⠉⠉⣿⣷⣶⣾⢿⣿⣷⣀⠀⠀⢀⡜⠀⢸⠀⠀⠀⠀⡄⡸⠁⠀⣡⠆⠀⢀⣤⠀⠻⣧⠀⠀⠀               
 
-It's time to drop your dogshit IDE and come to the dark side.
-
 ### Usage Quick Reference:
 
 **New to Vim/Neovim?**
@@ -38,7 +36,7 @@ It's time to drop your dogshit IDE and come to the dark side.
 
 [**Neovide**](https://github.com/neovide/neovide)
 
-Highly recommended to use this GUI in lieu of the terminal. The fluid animations *fucking rock*, and it remains blazingly fast.
+Highly recommended to use this GUI in lieu of the terminal. Fluid, blazingly fast.
 
 **Terminal:** `neovide`, `neovide .`, `neovide file.txt`, etc.
 
