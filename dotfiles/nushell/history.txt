@@ -1,0 +1,819 @@
+:q
+quit
+exit
+ls
+exa
+ls
+cowsay
+cowsay | fortune
+ps
+sys
+quit
+exit
+exa
+ls
+exit
+ls *.lua
+ls
+ls *.wezterm.lua
+ls *.log
+console
+kgx
+blackbox
+flatpak run com.raggesilver.BlackBox
+ls **.toml
+ls **/*.toml
+ls
+config nu
+neovide $nu.config-path
+$nu.config-path
+neovide /home/alsuwaidi/.config/nushell/config.nu
+neovide
+nvim
+exit
+nvim
+code
+nvim
+vi
+$nu.env-path
+ls
+cd ..
+kgx
+nvim
+neovide
+config nu
+neovide $nu.config-path
+neovide .config/nvim/init.lua
+neovide $nu.config-path
+q
+neovide $nu.config-path
+nvim
+neovide $nu.config-path
+nvim
+neovide .config/nvim/init.lua
+neovide $nu.config-path
+nvim
+neovide $nu.config-path
+nvim
+nvim $nu.config-path
+neovide $nu.config-path
+nv
+nvid
+flatpak run com.raggesilver.BlackBox
+ls
+config nu
+git clone https://github.com/nushell/nupm.git
+cd nupm
+ls
+use nupm/
+nupm install --force --path .
+cd ..
+git clone https://github.com/nushell/nu_scripts
+cd nu_scripts
+nupm install --force --path nu_scripts
+cd ..
+nupm install --force --path nu_scripts
+nupm test
+cd nupm
+nupm test
+cd ..
+cd nu_scripts
+ls
+cd themes
+ls
+cd nu-themes
+ls
+cd ../../..
+nupm install --path --force nu_scripts
+ls
+nvid
+nvid .config/nvim/init.lua
+config nu
+neovide $nu.config-path
+config nu
+sos
+print sos
+print $sos
+cd $sos
+cd ~/Documents/Godot/sands-of-sodis
+cd ~/Documents/Godot
+ls
+cd $sos
+obsidian && nvid
+obsidian and nvid
+nvid and obsidian
+obsidian; nvid
+obsidian &
+flatpak run org.wezfurlong.wezterm
+flatpak run org.wezfurlong.wezterm start -- bacon
+flatpak run org.wezfurlong.wezterm start -- nu
+flatpak run org.wezfurlong.wezterm start -- mprocs
+cd $sos
+flatpak run org.wezfurlong.wezterm start -- cd sand_engine && gitui
+flatpak run org.wezfurlong.wezterm start -- cd sand_engine
+flatpak run org.wezfurlong.wezterm start --always-new-process -- cd sand_engine
+cd sand_engine
+flatpak run org.wezfurlong.wezterm start -- neovide .
+cd $sos
+sand dev
+cd &sos
+cd $sos
+sand dev
+cd $sos
+sand dev
+config nu
+cd $sos
+sand dev
+cd $sos
+bacon
+cd $sos
+sand dev
+cd $sos
+sand dev
+sand dev
+cd $sos
+sand dev
+cd $sos
+config i3
+config
+config i3
+firefox
+ncspot
+cd $sos
+sand dev
+godot4
+cargo build
+nemo .
+config nvim
+nvim
+config nvim
+nvid ./.config/nvim/init.lua
+nvid .
+godot4 -e -w
+godot4
+obsidian
+firefox
+https:://github.com
+url
+whoami
+start https://github.com
+https://github.com
+start url https://github.com
+start | url https://github.com
+url https://github.com
+start https://github.com
+config nu
+firefox
+nu -v\
+nu -v
+ansi link
+print https://github.com
+firefox
+config nvim
+cd $sos
+cd sand_engine
+ls
+cd lua
+ls
+nvid battle.lua
+q
+config nvim
+nvim
+$NEOVIM_BIN
+firefox
+config nu
+cd &sos
+cd $sos
+sand dev
+cd $sos
+cd $sos/sand_engine
+cd $sos
+cd sand_engine
+cargo build
+godot4
+godot4 -e -w
+godot4
+cd $sos
+godot4
+godot4 -e -w
+godot4
+cd $sos
+cd sand_engine
+cargo build
+godot4
+godot4 -e -w
+godot4
+godot4 -e -w
+cargo build
+godot4
+cargo build
+cd $sos
+godot4 -e -w
+firefox
+cd $sos
+sand dev
+godot4 -e -w
+cargo build
+godot4 
+godot4 -e -w
+godot4 
+godot4 -e -w
+cargo build
+godot4 
+godot4 -e -w
+git rebase -i 170c4837ee07ac48c7bf1fcaef086b8c251013ff
+git rebase -i c7b004dd38f524548fd45430c2fc71badab3f4e3
+git rebase --abort
+git rebase -i 88f690a974504506e6c7e5c559b77e4b2cbc6317
+git rebase --continue
+git status
+git push
+git pull
+git status
+git push
+git rebase -i c7b004dd38f524548fd45430c2fc71badab3f4e3
+git status
+git pull
+git status
+git push
+git rebase -i c7b004dd38f524548fd45430c2fc71badab3f4e3
+git pull
+git push
+git status
+git rebase -i
+git status
+git rebase -i c7b004dd38f524548fd45430c2fc71badab3f4e3
+git status
+git rebase --continue
+git rebase --skip
+git status
+git pull
+git push
+git status
+git push
+git pull
+git status
+git push --force
+firefoz
+firfox
+firefox
+cd $sos
+sand dev
+cargo build
+firefox
+cd $sos
+sand dev
+config nvim
+nvid .
+firefox
+godot4 -e -w
+cargo build
+cargo add toml
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4 -e -w
+godot4
+firefox
+cd $sos
+sand dev
+cargo build
+ls
+godot4 -e -w
+cd $sos
+cd sand_engine
+cd ..
+cd map
+nvid .
+godot4
+firefox
+cd $sos
+sand dev
+firefox
+sudo apt install libconfig-dev libdbus-1-dev libegl-dev libev-dev libgl-dev libpcre2-dev libpixman-1-dev libx11-xcb-dev libxcb1-dev libxcb-composite0-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-glx0-dev libxcb-image0-dev libxcb-present-dev libxcb-randr0-dev libxcb-render0-dev libxcb-render-util0-dev libxcb-shape0-dev libxcb-util-dev libxcb-xfixes0-dev libxext-dev meson ninja-build uthash-dev
+git clone https://github.com/yshui/picom.git
+cd picom
+meson setup --build && type=release build ninja -C build
+meson setup --build; type=release build ninja -C build
+meson setup --build
+meson setup --buildtype=release build; ninja -C build
+sudo apt install libev
+sudo apt install libev-dev
+ninja -C build install
+sudo ninja -C build install
+cd ..
+mkdir ~/.config/picom
+cp /etc/xdg/picom.conf ~/.config/picom/
+cd ..
+cp etc/xdg/picom.conf ~/.config/picom/
+ls
+cd etc
+cd xdg
+ls
+cd ..
+picom
+cd usr
+cd ../../usr
+cd local
+ls
+rg -l picom.conf
+cp picom/picom.sample.conf ~/.config/picom/
+cd .config/picom
+neovide .
+config i3
+picom &
+firefox
+config nu
+config picom
+config i3
+cd .config
+ls
+cd i3status-rust
+ls
+config nu
+nvid config.toml
+flatpak run org.valveSoftware.Steam
+flatpak run com.valvesoftware.steam
+obsidian
+du-dust
+dust
+flatpak run com.valvesoftware.Steam
+firefox
+fire
+firefox
+flatpak run com.valvesoftware.Steam
+firefox
+xset s 0 0 -dpms
+xset
+xset q
+xautolock
+config i3
+cd $sos
+sand dev
+cargo build
+godot4 -e -w
+godot4
+cargo build
+firefox
+godot4
+cargo build
+nemo .
+nvid .
+godot4
+firefox
+cargo build
+godot4
+godot4 -e -w
+godot4
+cargo build
+godot4 -e -w
+godot4
+godot4 --verbose
+godot4 -e -w
+godot4
+godot4 -e -w
+cargo build
+godot4
+cargo build
+godot4 -e -w
+neovide .
+cargo build
+godot4
+godot4 -e -w
+godot4 -e
+config i3
+godot4
+xprop
+godot4
+godot4
+godot4 -e
+godot4
+xprop
+godot4 -e -w
+godot4
+godot4 -e -w
+godot4 -e
+godot4
+godot4 -e -w
+cargo build
+godot4
+godot4 -e -w
+godot4 --verbose
+ls
+godot4 -e -w
+godot4
+godot
+godot4
+cargo build
+godot4 -e -w
+godot4
+cargo build
+godot4
+cargo build
+godot4 -e -w
+godot4
+cargo build
+godot4 -e -w
+godot4
+cargo build
+godot4
+cargo build
+godot4 -e -w
+godot4
+cargo build
+godot4 -e -w
+godot4
+cargo build
+godot4 -e -w
+godot4
+godot4 -e -w
+godot4
+godot4 -e -w
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4
+cargo install flamegraph
+cargo build
+godot4
+cargo build
+godot4
+godot4 -e -w
+godot4
+cargo build
+godot4 -e -w
+godot4
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4
+godot4 -e -w
+cargo build
+godot4
+godot4 -e -w
+godot4
+godot4 -e -w
+godot4
+godot4 -e -w
+cargo build
+godot4
+godot4 -e -w
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4
+godot4 -e -w
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+ncspot
+godot4
+cargo build
+godot4 -e -w
+godot4
+godot4 -e -w
+cargo update
+cargo build
+cargo install
+cargo
+cargo check
+cargo install
+cargo
+cargo update
+cargo build
+cargo update
+cargo
+cargo --list
+cargo update
+cargo build
+cargo install
+cargo build
+cargo update
+cargo build
+nvid lib.rs
+cd ..
+nvid build.rs
+cargo update
+cargo build
+cargo update
+cargo build
+nvid .
+cargo build
+godot4 -version
+dune
+du-dust
+dust
+cd ..
+sudo nemo .
+godot42
+godot42 -e -w
+godot42
+godot42 -e -w
+godot41 -e -w
+godot42 -e -w
+cargo build
+sudo nemo /bin
+godot4 -e -w
+cargo build
+cargo clean
+cargo build
+cargo update
+cargo build
+cd rlua
+nvid build.rs
+cargo build
+:w
+cargo build
+cd rlua
+cargo build
+nemo .
+lua
+cargo build
+obsidi
+cargo update
+cargo build
+cargo build --release
+godot4
+bacon
+cd $sos
+cd sand_engine
+bacon
+cargo build
+godot4 -e -w
+godot4
+godot4 -e -w
+sudo apt install linux-tools-common linux-tools-generic linux-tools-`uname -r`
+sudo apt install linux-perf
+sudo apt install linux-tools-common linux-tools-generic
+cargo run
+cargo flamegraph
+cargo build
+cargo build --release
+ls
+SANDS_OF_SODIS.x86_64
+.SANDS_OF_SODIS.x86_64
+. SANDS_OF_SODIS.x86_64
+SANDS_OF_SODIS
+cargo list
+cargo --list
+cargo version
+pidof
+pstree
+godot4 -e -w
+flamegraph [-o my_flamegraph.svg] --pid godot4
+flamegraph [-o my_flamegraph.svg] --pid 33*
+flamegraph [-o my_flamegraph.svg] --pid 33
+sudo flamegraph [-o my_flamegraph.svg] --pid 33
+is-admin
+sudo nu
+sudo
+sudo -h
+flamegraph [-o my_flamegraph.svg] --pid 33
+nvid /proc/sys/kernel/perf_event_paranoid
+sudo nvid /proc/sys/kernel/perf_event_paranoid
+sudo neovide /proc/sys/kernel/perf_event_paranoid
+sudo nemo .
+sudo nvim
+echo -1 | sudo tee /proc/sys/kernel/perf_event_paranoid
+flamegraph [-o my_flamegraph.svg] --pid 33
+neovide /proc/sys/kernel/perf_event_paranoid
+rustc --version
+cargo --version
+sudo -s
+bash
+rustup update
+rustc --version
+perftree
+pidtree
+ps
+ps | where name =~ 'godot4'
+ps | where name =~ 'SANDS'
+flamegraph [-o my_flamegraph.svg] --pid 1566479
+godot4
+cd $sos
+firefox
+cd sand_engine | bacon
+cargo build
+godot4
+bacon
+cargo build
+godot4
+godot4 -e -w
+cargo build
+godot4
+godot4 -e -w
+godot4
+cargo build
+godot4
+cago build
+cargo build
+godot
+godot4
+godot4 -e -w
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4 -e -w
+godot4
+cargo build
+godot4 -e -w
+godot4
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4
+cd $sos
+cargo build --release
+cargo build
+cargo build --release
+godot4
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4 -e -w
+godot4
+godot4 -e -w
+cargo bui;d
+cargo build
+godot4
+cargo build
+cargo bui;d
+cargo build
+godot4
+godot4 -e- w
+godot4 -e -w
+cargo build
+godot4
+godot4
+godot4 -e -w
+cargo build
+godot4
+cargo build
+godot4 -e -w
+godot4
+cargo build
+mprocs cargo build
+mprocs godot4
+obsidian
+firefox
+cd $sos
+cd sand_engine
+sand dev
+cd ..
+sand dev
+cargo add grid
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+godot4
+cargo build
+cd $sos
+godot4
+cargo build
+cargo bui;d
+cargo build
+godot4
+godot4 -e -w
+godot4
+cargo bui;d
+cargo build
+godot4
+cargo build
+godot4 -e -w
+godot4
+git clone https://github.com/godotengine/godot-syntax-themes.git ~/.config/godot/text_editor_themes
+config nvim
+xkill
+godot4 -e -w
+godot4
+godot4 -e -w
+godot4
+cargo build
+godot4
+xkill
+cargo build
+godot4
+tiled
+/home/alsuwaidi/Documents/Tiled-1.10.1_Linux_Qt-6_x86_64.AppImage
+godot4 -e -w
+godot4
+godot4 -e -w
+cargo build
+godot4
+cargo build
+godot4
+godot4 -e -w
+godot4
+godot4 -e- w
+godot4 -e -w
+godot4
+godot4 -e -w
+godot4 -e-w
+godot4 -e -w
+godot4
+godot4 -e -w
+godot4
+godot4
+godot4 -e -w
+reaper
+xkill
+flatpak run com.valvesoftware.Steam
+cargo build
+godot4
+godot4 -e -w
+godot4 -e- w
+godot4 -e -w
+cargo build
+godot4
+godot4 -e -w
+godot4
+godot4 -e -w
+cargo build
+cd Desktio
+cd Desktop
+ls
+cd latex-projects
+ls
+cd Sodis-Documentation
+ls
+nvid SodisDoc.tex
+config nvim
+nvid SodisDoc.tex
+pdflatex
+latexmk
+config nvim
+cd .config/nvim
+ls
+mkdir ftplugin
+cd ftplugin
+nvid lua.vim
+config nvim
+nvid lua.vim
+config nvim
+nvid lua.vim
+nemo .
+nvid lua.lua
+config nvim
+nvid lua.lua
+config nvim
+nvid lua.lua
+config nvim
+nvid lua.lua
+config nvim
+nvid lua.lua
+cd Desktop
+cd latex-projects
+cd Sodis-Documentation/
+nvid SodisDoc.tex
+config nvim
+nvid SodisDoc.tex
+config nvim
+nvid SodisDoc.tex
+config nvim
+nvid SodisDoc.tex
+config nvim
+nvid SodisDoc.tex
+config nvim
+nvid SodisDoc.tex
+nvid .
+config nvim
+nvid SodisDoc.tex
+config nvim
+nvid SodisDoc.tex
+biber
+bibtex
+nvid SodisDoc.tex
+config nvim
+nvid SodisDoc.tex
+config nvim
+config nu
