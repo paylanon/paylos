@@ -19,3 +19,5 @@ Highly recommended to use this GUI in lieu of the terminal. Fluid, blazingly fas
 **NORMAL mode:** `gcc` to toggle comment on line.
 
 **VISUAL mode:** `gc` to toggle comment on selection.
+
+payl is typing...
