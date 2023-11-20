@@ -1,6 +1,6 @@
 ![paylos-header2](https://github.com/paylhorse/paylos/assets/74363924/bf211d6e-f5fe-40ce-8de9-d1eb9cfa3e91)
 
-**WORK IN PROGRESS**
+**WORK IN PROGRESS***
 
 **A NixOS/Hyprland Configuration that happens to be a dystopia.**
 
@@ -18,17 +18,19 @@ Art: Simon Stålenhag, sue me
 
 **❅ Cherry-pick anything that takes your fancy from the dotfiles directory!**
 
-Generally, these files goes to your ***/home/username/.config*** directory, in folders of the same name.
+Generally, these files goes to your ***/home/username/.config*** directory in folders of the same name, for Linux users.
 
 **❅ Alternatively, if you're running NixOS, you may choose to be adventerous and adopt paylos as your desktop config.**
 
 This is recommended, especially for a fresh installation of NixOS. Paylos makes for a great boilerplate: it comes with all the essentials of a good Linux desktop, with the option to activate a slew of little quirks catered to powerusers. Guide below.
 
-## About NixOS
+## About NixOS and Paylos
 
 For those unaware, NixOS is a Linux distribution in which the system in it's entirety is **declared** in what's essentially a comprehensive dotfile.
 
-Paylos is thus not just a Hyprland theme, but **a complete desktop experience**, intended, in fact, to be distributed and maintained for standard use at PAYLHORSE Software. 
+Paylos is thus not just a Hyprland theme, but **a complete desktop experience**, intended in fact to be distributed and maintained for standard use at PAYLHORSE Software. 
+
+***It's very early in development though, and currently not much more than a theme and boilerplate.**
 
 ## NixOS Installation
 (1) Clone and navigate into this repository:
