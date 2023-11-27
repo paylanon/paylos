@@ -12,12 +12,4 @@
 
 Highly recommended to use this GUI in lieu of the terminal. Fluid, blazingly fast.
 
-**Terminal:** `neovide`, `neovide .`, `neovide file.txt`, etc.
-
-[**Comment.vim**](https://github.com/numToStr/Comment.nvim)
-
-**NORMAL mode:** `gcc` to toggle comment on line.
-
-**VISUAL mode:** `gc` to toggle comment on selection.
-
 payl is typing...
