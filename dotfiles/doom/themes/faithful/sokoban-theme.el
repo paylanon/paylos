@@ -13,8 +13,10 @@
 ;; License: GPL-3+
 ;;; Commentary:
 
-;; Dark-mode, low-sat version of the palette used on Jonathan Blow's programming livestreams.
-;; A modification of @nikav's naysayer-theme.
+;; Refined version of the palette used on Jonathan Blow's early programming livestreams.
+;; A fork of @nikav's naysayer-theme.
+
+;; ------ Variant: FAITHFUL ------
 
 ;;; Code:
 
@@ -61,6 +63,12 @@
   :type 'string
   :group `sokoban-theme)
 
+(defcustom sokoban-theme-darkblue
+  "#006ab5"
+  "Primary colors - darkblue."
+  :type 'string
+  :group `sokoban-theme)
+
 (defcustom sokoban-theme-green
   "#D0DCB7"
   "Primary colors - green."
@@ -78,27 +86,27 @@
   :type 'string
   :group `sokoban-theme)
 
-(let ((background "#191919")
-      (gutters    "#191919")
-      (gutter-fg  "#191919")
-      (gutters-active "#191919")
+(let ((background "#062626")
+      (gutters    "#062626")
+      (gutter-fg  "#062626")
+      (gutters-active "#062626")
       (builtin      "#ffffff")
       (selection  "#5f5f6e")
       (text       "#d1b897")
       (comments   "#869b85")
-      (punctuation "#8cde94")
+      (punctuation "#a1d19b")
       (keywords "#dddddd")
       (variables "#c1d1e3")
-      (functions "#ffffff")
+      (functions "#dac6ab")
       (methods    "#c1d1e3")
       (strings    "#9bbfb6")
       (constants "#7ad0c6")
-      (macros "#8cde94")
+      (macros "#a1d19b")
       (numbers "#7ad0c6")
       (white     "#ffffff")
       (error "#c49191")
       (warning "#ffaa00")
-      (highlight-line "#222222")
+      (highlight-line "#072929")
       (line-fg "#444444"))
 
   (custom-theme-set-faces
@@ -109,7 +117,7 @@
 
    `(default                          ((t (:foreground ,text :background ,background, :weight normal))))
    `(region                           ((t (:foreground nil :background ,selection))))
-   `(cursor                           ((t (:background ,white                        ))))
+   `(cursor                           ((t (:background ,keywords))))
    `(fringe                           ((t (:background ,background   :foreground ,white))))
    `(linum                            ((t (:background ,background :foreground ,gutter-fg))))
    `(highlight ((t (:foreground nil :background ,selection))))
@@ -171,11 +179,12 @@
 
    `(mode-line-inactive ((t (:inverse-video unspecified
                                             :underline unspecified
-                                            :foreground ,text
-                                            :background ,background
+                                            :foreground ,background
+                                            :background ,keywords
                                             :box nil))))
    `(powerline-inactive1 ((t (:background ,background :foreground ,text))))
    `(powerline-inactive2 ((t (:background ,background :foreground ,text))))
+   `(persp-face-lighter-buffer-not-in-persp ((t (:foreground ,background :background ,error))))
 
     ;; better compatibility with default DOOM mode-line
    `(error ((t (:foreground nil :weight normal))))
@@ -194,13 +203,31 @@
 
    ;; highlight numbers
    `(highlight-numbers-number ((t (:foreground ,numbers))))
-  )
+
+   ;; diredfl
+   `(diredfl-dir-heading ((t (:foreground ,text :background ,background))))
+   `(diredfl-file-name ((t (:foreground ,sokoban-theme-blue))))
+   `(diredfl-file-suffix((t (:foreground ,sokoban-theme-blue))))
+   `(diredfl-number ((t (:foreground ,keywords))))
+   `(diredfl-date-time ((t (:foreground ,comments))))
+
+   ;; avy
+   `(avy-lead-face ((t (:background ,sokoban-theme-darkblue, :foreground ,keywords))))
+
+   ;; vterm
+   `(vterm-color-red ((t (:foreground ,sokoban-theme-red :background ,sokoban-theme-red))))
+   `(vterm-color-blue ((t (:foreground ,sokoban-theme-blue :background ,sokoban-theme-blue))))
+   `(vterm-color-cyan ((t (:foreground ,sokoban-theme-cyan :background ,sokoban-theme-cyan))))
+   `(vterm-color-black ((t (:foreground ,background :background ,background))))
+   `(vterm-color-green ((t (:foreground ,sokoban-theme-green :background ,sokoban-theme-green))))
+   `(vterm-color-white ((t (:foreground ,keywords :background ,keywords))))
+   `(vterm-color-yellow ((t (:foreground ,sokoban-theme-yellow :background ,sokoban-theme-yellow))))
+   `(vterm-color-magenta ((t (:foreground ,sokoban-theme-magenta :background ,sokoban-theme-magenta)))))
+
 
   (custom-theme-set-variables
     'sokoban
-    '(linum-format " %5i ")
-  )
-)
+    '(linum-format " %5i ")))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)

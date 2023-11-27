@@ -11,6 +11,9 @@
 
 ;; PACKAGES
 (package! evil-tutor)
+(package! rainbow-mode)
+(package! glsl-mode)
+(package! gdscript-mode)
 ;; CUSTOM THEMES
 (package! kanagawa-theme)
 (package! dream-theme)
