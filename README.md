@@ -1,8 +1,6 @@
 ![paylos-header2](https://github.com/paylhorse/paylos/assets/74363924/bf211d6e-f5fe-40ce-8de9-d1eb9cfa3e91)
 
-**WORK IN PROGRESS***
-
-**A NixOS/Sway Configuration that happens to be a dystopia.**
+**A NixOS/Sway Configuration that happens to be a dystopia, as well as some dotfiles.**
 
 [![built with nix](https://builtwithnix.org/badge.svg)](https://builtwithnix.org)
 
@@ -18,15 +16,11 @@ Generally, these files goes to your ***/home/username/.config*** directory in fo
 
 **❅ Alternatively, if you're running NixOS, you may choose to be adventerous and adopt paylos as your desktop config.**
 
-This is recommended, especially for a fresh installation of NixOS. Paylos makes for a great boilerplate: it comes with all the essentials of a good Linux desktop, with the option to activate a slew of little quirks catered to powerusers. Guide below.
+Paylos makes for a great boilerplate: it comes with all the essentials of a good Linux desktop, with the option to activate a slew of little quirks catered to powerusers. Guide below.
 
 ## About NixOS and Paylos
 
-For those unaware, NixOS is a Linux distribution in which the system in it's entirety is **declared** in what's essentially a comprehensive dotfile.
-
-Paylos is thus not just a Hyprland theme, but **a complete desktop experience**, intended in fact to be distributed and maintained for standard use at PAYLHORSE Software. 
-
-***It's very early in development though, and currently not much more than a theme and boilerplate.**
+For those unaware, NixOS is a Linux distribution in which the system in it's entirety is declared in what's essentially a comprehensive dotfile.
 
 ## NixOS Installation
 (1) Clone and navigate into this repository:
@@ -34,11 +28,11 @@ Paylos is thus not just a Hyprland theme, but **a complete desktop experience**,
 [user@nixos:~]$ git clone https://github.com/paylhorse/paylos.git
 [user@nixos:~]$ cd paylos
 ```
-(2) Build paylos provisionally as a *flake*, and take it for a spin:
+(2) Build paylos provisionally as a flake, and take it for a spin:
 ```console
 [user@nixos:~/paylos]$ sudo nixos-rebuild switch --flake .#paylos
 ```
-**Here is a good breakpoint to ensure that everything's to your liking, making edits to the config files and rebuilding with the command above as necessary.**
+Here is a good breakpoint to ensure that everything's to your liking, making edits to the config files and rebuilding with the command above as necessary.
 
 (3) Once you're ready to adopt paylos as your default, copy the contents of the repository into your NixOS config directory.
 
@@ -50,5 +44,3 @@ Otherwise, it would be wherever you have your *configuration.nix*, which the *co
 [user@nixos:~/paylos]$ sudo nixos-rebuild switch
 ```
 **All done!** Welcome to your slick new desktop.
-
-Paylos is an ongoing project - expect major updates in the near future offering additional features.
