@@ -11,5 +11,3 @@
 [**Neovide**](https://github.com/neovide/neovide)
 
 Highly recommended to use this GUI in lieu of the terminal. Fluid, blazingly fast.
-
-payl is typing...
