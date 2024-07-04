@@ -11,15 +11,17 @@
 
 ;; PACKAGES
 (package! evil-tutor)
+(package! evil-goggles)
 (package! rainbow-mode)
-(package! glsl-mode)
 (package! gdscript-mode)
+(package! glsl-mode)
+(package! gdshader-mode
+  :recipe (:host github :repo "bbbscarter/gdshader-mode"))
+(package! org-auctex
+  :recipe (:host github :repo "karthink/org-auctex"))
+(package! autothemer)
 ;; CUSTOM THEMES
-(package! kanagawa-theme)
-(package! dream-theme)
-(package! darcula-theme)
-(package! naysayer-theme)
-(package! twilight-theme)
+(package! doom-themes)
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:

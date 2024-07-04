@@ -21,8 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Sarasa Mono CL Nerd Font" :size 15)
-      doom-variable-pitch-font (font-spec :family "Sarasa Mono CL Nerd Font" :size 15))
+(setq doom-font (font-spec :family "ProggyCleanTTSZBP" :size 17.0)
+      doom-variable-pitch-font (font-spec :family "ProggyCleanTTSZBP" :size 17.0))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -42,7 +42,12 @@
 ;; (load-theme 'naysayer t)
 ;; (load-theme 'twilight t)
 ;; (load-theme 'darcula t)
-(load! "themes/darkmode/sokoban-theme.el")
+(load! "themes/vanilla/sokoban-theme.el")
+;; (load! "themes/wheatgrass-theme.el")
+;; (load! "themes/emacs-automata-theme.el")
+(load-theme 'doom-rouge t t)
+(load-theme 'doom-badger t t)
+(load-theme 'doom-sourcerer t t)
 (load-theme 'sokoban t)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -85,9 +90,17 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(fringe-mode `(0 . 4))
+;; (fringe-mode `(0 . 4))
 (setq confirm-kill-emacs nil)
-;; (add-to-list `auto-mode-alist `(("\\.mdx\\'" . markdown-mode)))
+
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-footer)
+
+;; STOP THE COMMENTS
+(setq +evil-want-o/O-to-continue-comments nil)
+
+;; STOP THE ICONS
+(setq doom-modeline-icon nil)
 
 ;; LOCAL SCRIPTS
 (load! "lisp/jai-mode.el")
@@ -101,7 +114,48 @@
   ;; code here will run after the package is loaded
   (setq treesit-language-source-alist
         '((bash "https://github.com/tree-sitter/tree-sitter-bash")
-          (rust "https://github.com/tree-sitter/tree-sitter-rust")))
+          (rust "https://github.com/tree-sitter/tree-sitter-rust")
+          (go "https://github.com/tree-sitter/tree-sitter-go")))
   (setq major-mode-remap-alist
         '((bash-mode . bash-ts-mode)
           (rustic-mode . rust-ts-mode))))
+
+(custom-set-faces
+'(evil-goggles-default-face ((t (:inherit 'org-agenda-clocking)))))
+
+(add-hook! 'org-cdlatex-mode-hook 'electric-pair-local-mode)
+(add-hook! 'org-cdlatex-mode-hook 'org-auctex-mode)
+(add-hook! 'electric-pair-local-mode-hook
+  (push '(?\$ . ?\$) electric-pair-pairs)
+  (push '(?\* . ?\*) electric-pair-pairs))
+
+;; DEFAULT DIRECTORY (Windows)
+;; (setq-hook! '+doom-dashboard-mode-hook default-directory "C:/Users/amaka")
+
+;; LANGUAGE-SPECIFIC THEMES
+
+;; Function to switch themes
+(defun switch-themes-based-on-mode ()
+  (cond
+   ((and (derived-mode-p 'jai-mode)
+         (not (member 'sokoban custom-enabled-themes)))
+    (mapc #'disable-theme custom-enabled-themes)
+    (load-theme 'sokoban t))
+   ((and (derived-mode-p 'rust-ts-mode)
+         (not (member 'doom-badger custom-enabled-themes)))
+    (mapc #'disable-theme custom-enabled-themes)
+    (load-theme 'doom-badger t))
+   ((and (derived-mode-p 'lua-mode)
+         (not (member 'doom-sourcerer custom-enabled-themes)))
+    (mapc #'disable-theme custom-enabled-themes)
+    (load-theme 'doom-sourcerer t))
+   ((and (derived-mode-p 'c++-mode)
+         (not (member 'doom-sourcerer custom-enabled-themes)))
+    (mapc #'disable-theme custom-enabled-themes)
+    (load-theme 'doom-sourcerer t))
+   ((and (derived-mode-p 'glsl-mode)
+         (not (member 'doom-rouge custom-enabled-themes)))
+    (mapc #'disable-theme custom-enabled-themes)
+    (load-theme 'doom-rouge t))))
+
+(add-hook 'buffer-list-update-hook 'switch-themes-based-on-mode)

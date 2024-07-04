@@ -16,7 +16,7 @@
 ;; Refined version of the palette used on Jonathan Blow's early programming livestreams.
 ;; A fork of @nikav's naysayer-theme.
 
-;; ------ Variant: DARKMODE (Default) ------
+;; ------ Variant: VANILLA ------
 
 ;;; Code:
 
@@ -92,7 +92,7 @@
       (gutters-active "#191919")
       (builtin      "#ffffff")
       (selection  "#5f5f6e")
-      (text       "#d1b897")
+      (text       "#decdb6")
       (comments   "#869b85")
       (punctuation "#a1d19b")
       (keywords "#dddddd")
@@ -227,7 +227,12 @@
    ;; git-gutter
    `(git-gutter:added ((t (:foreground ,sokoban-theme-green :background ,background))))
    `(git-gutter:deleted ((t (:foreground ,sokoban-theme-red :background ,background))))
-   `(git-gutter:modified ((t (:foreground ,sokoban-theme-magenta :background ,background)))))
+   `(git-gutter:modified ((t (:foreground ,sokoban-theme-magenta :background ,background))))
+
+  ;; goggles
+   `(goggles-added ((t (:foreground ,text :background ,keywords))))
+   `(goggles-changed ((t (:foreground ,text :background ,keywords))))
+   `(goggles-removed ((t (:foreground ,text :background ,keywords)))))
 
 
   (custom-theme-set-variables
