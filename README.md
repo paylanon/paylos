@@ -1,9 +1,7 @@
-![paylos-header2](https://github.com/paylhorse/paylos/assets/74363924/bf211d6e-f5fe-40ce-8de9-d1eb9cfa3e91)
+![paylos-header2](https://github.com/paylanon/paylos/assets/74363924/f6a460a0-c169-4f80-9a77-ad31d1987171)
 
-**A NixOS/Sway Configuration that happens to be a dystopia, as well as some dotfiles.**
+Dystopian dotfiles.
 
-[![built with nix](https://builtwithnix.org/badge.svg)](https://builtwithnix.org)
-
-Includes the Neovim Configuration: [**DEVILVIM**](https://github.com/paylhorse/paylos/tree/main/dotfiles/nvim)
+Includes the Emacs Configuration: [**FFEmacs**](https://github.com/paylhorse/paylos/tree/main/dotfiles/.emacs.d)
 
 Art: Simon Stålenhag, sue me
