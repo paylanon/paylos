@@ -1,1 +1,0 @@
-**Fast, Functional Emacs** (FFEmacs)
