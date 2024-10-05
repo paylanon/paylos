@@ -3,6 +3,7 @@
 ;;  -------------
 
 (load-theme 'sokoban t)
+(load-theme 'kanagawa t t)
 
 (set-face-attribute 'default nil :font "ProggyCleanTTSZBP" :height 164)
 
@@ -21,13 +22,23 @@
       custom-file "~/.emacs.d/custom.el"
       electric-pair-open-newline-between-pairs t)
 
+(with-eval-after-load 'org
+  (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.6)))
+
+(setq make-backup-files nil)
+(setq next-line-add-newlines t)
+(subword-mode 1)
+(electric-pair-mode 1)
+(global-visual-line-mode 1)
+(add-to-list 'auto-mode-alist '("\\.hlsl\\'" . shader-mode))
+
 ;;  ----------
 ;; | PACKAGES |
 ;;  ----------
 
 ;; ==== STRAIGHT.EL BOOTSTRAP ====
 
-(defvar bootstrap-version)
+ (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name
         "straight/repos/straight.el/bootstrap.el"
@@ -47,10 +58,33 @@
 
 (straight-use-package 'use-package)
 
+;; == PLUG & PLAY ==
+
+(straight-use-package 'consult)
+(straight-use-package 'wgrep)
+(straight-use-package 'avy)
+(straight-use-package 'multiple-cursors)
+(straight-use-package 'shader-mode)
+(straight-use-package 'rust-mode)
+(straight-use-package 'lua-mode)
+(straight-use-package 'autothemer)
+(straight-use-package 'rainbow-mode)
+(straight-use-package '(jai-mode :type git :host github :repo "krig/jai-mode"))
+
+;; == CUSTOM CONFIG ==
+
 (use-package vertico
   :straight t
   :init
   (vertico-mode)
+  :config
+  (vertico-multiform-mode 1)
+  (setq vertico-multiform-commands
+	'((find-file flat)
+	  (find-from-home flat)
+	  (consult-line flat)
+	  (switch-to-buffer flat)
+	  (execute-extended-command flat)))
   :hook (rfn-eshadow-update-overlay . vertico-directory-tidy))
 
 (use-package hl-todo
@@ -71,7 +105,36 @@
   :config
   (setq-default goggles-pulse t))
 
-;; DOOMEMACS which-key
+(use-package marginalia
+  :ensure t
+  :config
+  (marginalia-mode))
+
+(use-package embark
+  :ensure t
+  :bind
+  (("C-." . embark-act)
+   ("C-;" . embark-dwim)
+   ("C-h B" . embark-bindings))
+  :init
+  (setq prefix-help-command #'embark-prefix-help-command)
+  :config
+  (add-to-list 'display-buffer-alist
+               '("\\`\\*Embark Collect \\(Live\\|Completions\\)\\*"
+                 nil
+                 (window-parameters (mode-line-format . none)))))
+
+(use-package embark-consult
+  :ensure t
+  :hook
+  (embark-collect-mode . consult-preview-at-point-mode))
+
+(use-package guru-mode
+  :ensure t
+  :config
+  (guru-global-mode 1))
+
+;; ;; DOOMEMACS which-key
 (use-package which-key
   :straight t
   :config
@@ -96,38 +159,22 @@
   (load-theme 'doom-badger t t)
   (load-theme 'doom-sourcerer t t))
 
-;; ==== PLUG & PLAY LIST ====
-
-(straight-use-package 'consult)
-(straight-use-package 'multiple-cursors)
-(straight-use-package 'shader-mode)
-(straight-use-package 'rainbow-mode)
-(straight-use-package '(jai-mode :type git :host github :repo "krig/jai-mode"))
-
 ;;  ----------
 ;; | KEYBINDS |
 ;;  ----------
 
 (global-set-key [remap isearch-forward] #'consult-line)
 (global-set-key [remap imenu] #'consult-imenu)
-(global-set-key [remap find-file] #'ido-find-file)
+
+(keymap-global-set "C-<return>" '+default/newline-below)
+(keymap-global-set "C-S-<return>" '+default/newline-above)
+(keymap-global-set "C-S-s" 'consult-ripgrep)
+(keymap-global-set "C-x F" 'find-from-home)
+(keymap-global-set "M-p" 'backward-paragraph)
+(keymap-global-set "M-n" 'forward-paragraph)
+(keymap-global-set "C-L" 'copy-whole-line)
 
 ;;; DOOMEMACS universal, non-nuclear escape
-
-;; `keyboard-quit' is too much of a nuclear option. I wanted an ESC/C-g to
-;; do-what-I-mean. It serves four purposes (in order):
-;;
-;; 1. Quit active states; e.g. highlights, searches, snippets, iedit,
-;;    multiple-cursors, recording macros, etc.
-;; 2. Close popup windows remotely (if it is allowed to)
-;; 3. Refresh buffer indicators, like diff-hl and flycheck
-;; 4. Or fall back to `keyboard-quit'
-;;
-;; And it should do these things incrementally, rather than all at once. And it
-;; shouldn't interfere with recording macros or the minibuffer. This may require
-;; you press ESC/C-g two or three times on some occasions to reach
-;; `keyboard-quit', but this is much more intuitive.
-
 (defvar doom-escape-hook nil
   "A hook run when C-g is pressed (or ESC in normal mode, for evil users).
 
@@ -157,18 +204,9 @@ all hooks after it are ignored.")
 (with-eval-after-load 'eldoc
   (eldoc-add-command 'doom/escape))
 
-(keymap-global-set "C-<return>" '+default/newline-below)
-(keymap-global-set "C-S-<return>" '+default/newline-above)
-(keymap-global-set "C-S-s" 'consult-ripgrep)
-(keymap-global-set "C-S-h" 'find-from-home)
-
 ;;  -------
 ;; | MISC. |
 ;;  -------
-
-(setq make-backup-files nil)
-(electric-pair-mode 1)
-(add-to-list 'auto-mode-alist '("\\.hlsl\\'" . shader-mode))
 
 ;; DOOMEMACS text defaults
 
@@ -182,7 +220,6 @@ all hooks after it are ignored.")
     (beginning-of-line)
     (save-excursion (newline))
     (indent-according-to-mode)))
-
 
 (defun +default/newline-below ()
   "Insert an indented new line after the current one."
@@ -337,20 +374,27 @@ possible, or just one char if that's not possible."
         ;; Otherwise, do simple deletion.
         ((delete-char (- n) killflag))))
 
-;; FFEmacs CHAMELEON: LANGUAGE-SPECIFIC THEMES
-
-(defun chameleon ()
+;; FFEmacs OCTOCAMO: language-specific themes
+(defun octocamo ()
   "Load theme automatically based on current mode."
   (cond
    ((and (derived-mode-p 'jai-mode)
          (not (member 'sokoban custom-enabled-themes)))
     (mapc #'disable-theme custom-enabled-themes)
     (enable-theme 'sokoban))
-   ((and (derived-mode-p 'rust-ts-mode)
-         (not (member 'doom-badger custom-enabled-themes)))
+   ((and (derived-mode-p 'rust-mode)
+         (not (member 'kanagawa custom-enabled-themes)))
     (mapc #'disable-theme custom-enabled-themes)
-    (enable-theme 'doom-badger))
+    (enable-theme 'kanagawa))
+   ((and (derived-mode-p 'conf-toml-mode)
+         (not (member 'kanagawa custom-enabled-themes)))
+    (mapc #'disable-theme custom-enabled-themes)
+    (enable-theme 'kanagawa))
    ((and (derived-mode-p 'lua-mode)
+         (not (member 'doom-sourcerer custom-enabled-themes)))
+    (mapc #'disable-theme custom-enabled-themes)
+    (enable-theme 'doom-sourcerer))
+   ((and (derived-mode-p 'c-mode)
          (not (member 'doom-sourcerer custom-enabled-themes)))
     (mapc #'disable-theme custom-enabled-themes)
     (enable-theme 'doom-sourcerer))
@@ -366,21 +410,18 @@ possible, or just one char if that's not possible."
          (not (member 'doom-rouge custom-enabled-themes)))
     (mapc #'disable-theme custom-enabled-themes)
     (enable-theme 'doom-rouge))))
+   ;; (t
+    ;; (mapc #'disable-theme custom-enabled-themes)
+    ;; (enable-theme 'sokoban))))
 
-(add-hook 'buffer-list-update-hook 'chameleon)
+(add-hook 'buffer-list-update-hook 'octocamo)
 
 ;; FFEmacs FIND-FROM-HOME
-
 (defun find-from-home ()
-  "Call ido-find-file from the default directory."
-  ;; (interactive)
-  ;; (let ((current-dir default-directory)
-  ;;       (current-buffer (current-buffer)))
-  ;;   (with-temp-buffer
-  ;;     (cd current-dir)
-  ;;     (ido-find-file-in-dir current-dir))
-  ;;   (switch-to-buffer current-buffer))
-  )
+  "Call find-file from the home directory."
+  (interactive)
+  (let ((default-directory (expand-file-name "~/")))
+    (call-interactively 'find-file)))
 
 (defun display-startup-time ()
   (message
@@ -388,15 +429,28 @@ possible, or just one char if that's not possible."
 
 (add-hook 'emacs-startup-hook #'display-startup-time)
 
+;; FFEmacs KILL-ALL-OTHER-BUFFERS
 (defun kill-all-other-buffers ()
-    "Kill all other buffers."
-    (interactive)
-    (mapc 'kill-buffer 
-          (delq (current-buffer) 
-                (remove-if-not 'buffer-file-name (buffer-list)))))
+  "Kill all buffers except current and special buffers."
+  (interactive)
+  (let ((current (current-buffer)))
+    (dolist (buffer (buffer-list))
+      (unless (or (eq buffer current)
+                  (string-prefix-p " " (buffer-name buffer))
+                  (string-prefix-p "*" (buffer-name buffer)))
+        (kill-buffer buffer)))
+    (message "Killed all other buffers")))
 
-;; **** Personal stuff NOTE: You can delete all this ********************************
+;; FFEmacs COPY-WHOLE-LINE
+(defun copy-whole-line ()
+  "Copy current line into kill ring without marking it."
+  (interactive)
+  (save-excursion
+    (move-beginning-of-line nil)
+    (kill-line 1)
+    (yank)))
 
-(cd "c:/Users/amaka")
+;; Start in home directory
+(cd "~")
 
-;; **********************************************************************************
+
