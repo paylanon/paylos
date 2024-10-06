@@ -4,9 +4,16 @@
 
 # -- ALIASES --
 alias nvid = neovide
+alias emacs = ~/emacs/src/emacs
+alias doom = ~/.emacs.d/bin/doom
+alias zig = ~/zig/zig
+alias go = /usr/local/go/bin/go
+alias godot4m = ~/Downloads/godot4m/godot4m
 
 # -- VARIABLES --
 let sos = '~/Documents/Godot/SANDS-OF-SODIS'
+let samson = '~/Documents/Godot/Samson'
+let up = '~/ucla/physics'
 
 # -- CUSTOM COMMANDS --
 def firefox [] {
@@ -17,26 +24,26 @@ print 'https://chat.openai.com/'
 }
 
 def "sand dev" [] {
-nvid ./sand_engine;
+emacs ./sand_engine;
 flatpak run org.wezfurlong.wezterm start --cwd ./sand_engine -- nu;
 flatpak run org.wezfurlong.wezterm start --cwd ./sand_engine -- bacon;
 flatpak run org.wezfurlong.wezterm start --cwd ./sand_engine -- gitui;
 }
 
 def "config i3" [] {
-nvid ~/.config/i3/config
+emacs ~/.config/i3/config
 }
 
 def "config i3status-rust" [] {
-nvid ~/.config/i3status-rust/config.toml
+emacs ~/.config/i3status-rust/config.toml
 }
 
 def "config nvim" [] {
-nvid ~/.config/nvim/init.lua
+emacs ~/.config/nvim/init.lua
 }
 
 def "config picom" [] {
-nvid ~/.config/picom/picom.conf
+emacs ~/.config/picom/picom.conf
 }
 
 # For more information on defining custom themes, see
@@ -257,7 +264,7 @@ $env.config = {
     }
 
     cursor_shape: {
-        emacs: line # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (line is the default)
+        emacs: block # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (line is the default)
         vi_insert: block # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (block is the default)
         vi_normal: underscore # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (underscore is the default)
     }
@@ -266,7 +273,7 @@ $env.config = {
     use_grid_icons: true
     footer_mode: "25" # always, never, number_of_rows, auto
     float_precision: 2 # the precision for displaying floats in tables
-    buffer_editor: "neovide" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
+    buffer_editor: "emacs" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
     use_ansi_coloring: true
     bracketed_paste: true # enable bracketed paste, currently useless on windows
     edit_mode: emacs # emacs, vi

@@ -226,6 +226,9 @@ bar {
 for_window [class="Godot_Engine"] floating enable
 for_window [class="Godot"] floating enable
 for_window [class="SANDS OF SODIS"] floating enable
+for_window [class="Samson's Path"] floating enable
+for_window [class="HELGOLAND"] floating enable
+for_window [class="Limbowalker"] floating enable
 
 # -- WALLPAPER --
 exec ~/.fehbg &
