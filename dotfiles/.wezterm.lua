@@ -10,7 +10,7 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
-config.font = wezterm.font 'Sarasa Mono CL Nerd Font'
+-- config.font = wezterm.font 'Sarasa Mono CL Nerd Font'
 
 -- This is where you actually apply your config choices
 config.font_size = 11
@@ -33,8 +33,11 @@ config.window_padding = {
 
 config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
+config.default_cursor_style = 'BlinkingBlock'
+config.animation_fps = 85
 
-config.window_background_opacity = 0.95
+-- config.window_background_opacity = 0.994
+config.enable_wayland = false
 
 -- and finally, return the configuration to wezterm
 return config
