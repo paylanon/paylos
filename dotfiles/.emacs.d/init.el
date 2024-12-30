@@ -5,7 +5,7 @@
 (load-theme 'sokoban t)
 (load-theme 'kanagawa t t)
 
-(set-face-attribute 'default nil :font "ProggyCleanTTSZBP" :height 164)
+(set-face-attribute 'default nil :font "ProggyCleanTTSZBP" :height 160)
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -31,6 +31,7 @@
 (electric-pair-mode 1)
 (global-visual-line-mode 1)
 (add-to-list 'auto-mode-alist '("\\.hlsl\\'" . shader-mode))
+(setq dired-dwim-target t)
 
 ;;  ----------
 ;; | PACKAGES |
