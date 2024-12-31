@@ -122,6 +122,7 @@
    `(linum                            ((t (:background ,background :foreground ,gutter-fg))))
    `(highlight                        ((t (:foreground nil :background ,selection))))
    `(link                             ((t (:foreground ,keywords :background nil :underline t))))
+   `(success                          ((t (:foreground ,comments :background nil :weight bold))))
 
    ;; Font lock faces
    ;; *****************************************************************************
