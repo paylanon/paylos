@@ -92,7 +92,8 @@
       (gutters-active "#191919")
       (builtin      "#ffffff")
       (selection  "#5f5f6e")
-      (text       "#ebe1d3")
+      (text       "#ded0ba") 
+      (text-light       "#ebe1d3")
       (comments   "#869b85")
       (punctuation "#a1d19b")
       (keywords "#dddddd")
@@ -106,7 +107,8 @@
       (white     "#ffffff")
       (error "#c49191")
       (warning "#ffaa00")
-      (highlight-line "#222222")
+      ;; (highlight-line "#222222")
+      (highlight-line "#313045")
       (line-fg "#444444"))
 
   (custom-theme-set-faces
@@ -121,7 +123,7 @@
    `(fringe                           ((t (:background ,background   :foreground ,white))))
    `(linum                            ((t (:background ,background :foreground ,gutter-fg))))
    `(highlight                        ((t (:foreground nil :background ,selection))))
-   `(link                             ((t (:foreground ,keywords :background nil :underline t))))
+   `(link                             ((t (:foreground ,methods :background nil :underline t))))
    `(success                          ((t (:foreground ,comments :background nil :weight bold))))
 
    ;; Font lock faces

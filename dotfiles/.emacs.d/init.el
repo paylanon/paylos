@@ -4,13 +4,17 @@
 
 (load-theme 'sokoban t)
 (load-theme 'kanagawa t t)
+;; (load-theme 'taylor t t)
+(load-theme 'colonoscopy t t)
 
-(set-face-attribute 'default nil :font "ProggyCleanTTSZBP" :height 160)
+(set-face-attribute 'default nil :font "ProggyVector" :height 110)
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
 (load-file "~/.emacs.d/splash-screen.el")
+(load-file "~/.emacs.d/slang-mode.el")
+(load-file "~/.emacs.d/jai-mode.el")
 
 ;;  -----------
 ;; | VARIABLES |
@@ -26,12 +30,14 @@
   (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.6)))
 
 (setq make-backup-files nil)
-(setq next-line-add-newlines t)
+;; (setq next-line-add-newlines t)
 (subword-mode 1)
 (electric-pair-mode 1)
 (global-visual-line-mode 1)
+(global-hl-line-mode 1)
 (add-to-list 'auto-mode-alist '("\\.hlsl\\'" . shader-mode))
 (setq dired-dwim-target t)
+(setq-default indent-tabs-mode nil)
 
 ;;  ----------
 ;; | PACKAGES |
@@ -70,7 +76,7 @@
 (straight-use-package 'lua-mode)
 (straight-use-package 'autothemer)
 (straight-use-package 'rainbow-mode)
-(straight-use-package '(jai-mode :type git :host github :repo "krig/jai-mode"))
+;; (straight-use-package '(jai-mode :type git :host github :repo "krig/jai-mode"))
 
 ;; == CUSTOM CONFIG ==
 
@@ -160,6 +166,12 @@
   (load-theme 'doom-badger t t)
   (load-theme 'doom-sourcerer t t))
 
+;; slang mode
+(autoload 'slang-mode "slang-mode"
+ "Mode for editing slang source files")
+(setq auto-mode-alist
+     (append '(("\\.sl$" . slang-mode)) auto-mode-alist))
+
 ;;  ----------
 ;; | KEYBINDS |
 ;;  ----------
@@ -173,7 +185,7 @@
 (keymap-global-set "C-x F" 'find-from-home)
 (keymap-global-set "M-p" 'backward-paragraph)
 (keymap-global-set "M-n" 'forward-paragraph)
-(keymap-global-set "C-L" 'copy-whole-line)
+(keymap-global-set "C-S-l" 'copy-whole-line)
 
 ;;; DOOMEMACS universal, non-nuclear escape
 (defvar doom-escape-hook nil
@@ -396,17 +408,17 @@ possible, or just one char if that's not possible."
     (mapc #'disable-theme custom-enabled-themes)
     (enable-theme 'doom-sourcerer))
    ((and (derived-mode-p 'c-mode)
-         (not (member 'doom-sourcerer custom-enabled-themes)))
+         (not (member 'colonoscopy custom-enabled-themes)))
     (mapc #'disable-theme custom-enabled-themes)
-    (enable-theme 'doom-sourcerer))
+    (enable-theme 'colonoscopy))
    ((and (derived-mode-p 'c++-mode)
-         (not (member 'doom-sourcerer custom-enabled-themes)))
+         (not (member 'colonoscopy custom-enabled-themes)))
     (mapc #'disable-theme custom-enabled-themes)
-    (enable-theme 'doom-sourcerer))
+    (enable-theme 'colonoscopy))
    ((and (derived-mode-p 'shader-mode)
-         (not (member 'doom-sourcerer custom-enabled-themes)))
+         (not (member 'colonoscopy custom-enabled-themes)))
     (mapc #'disable-theme custom-enabled-themes)
-    (enable-theme 'doom-sourcerer))   
+    (enable-theme 'colonoscopy))   
    ((and (derived-mode-p 'glsl-mode)
          (not (member 'doom-rouge custom-enabled-themes)))
     (mapc #'disable-theme custom-enabled-themes)
